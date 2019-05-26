@@ -182,6 +182,7 @@ empires_presets = [
                          landmark_cards=["Museum"])]),
 ]
 
+# TODO: nocturne/renaissance support
 nocturne_presets = []
 
 renaissance_presets = []

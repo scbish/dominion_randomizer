@@ -64,6 +64,16 @@ seaside_presets = [
                          kingdom_cards=["Explorer", "Haven", "Native Village", "Pirate Ship", "Sea Hag"])]),
 ]
 
+alchemy_presets = [
+    Game("Collectors",
+         [ExpansionCards(name=EMPIRES,
+                         kingdom_cards=["City Quarter", "Crown", "Encampment", "Enchantress", "Farmers' Market"],
+                         landmark_cards=["Colonnade", "Museum"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apothecary", "Apprentice", "Herbalist", "Transmute", "University"],
+                         treasure_cards=["Potion"])]),
+]
+
 prosperity_presets = [
     Game("Big Time",
          [ExpansionCards(name=EMPIRES,
@@ -82,6 +92,16 @@ prosperity_presets = [
                          kingdom_cards=["Bishop", "Monument", "Mint", "Peddler", "Talisman"],
                          treasure_cards=["Platinum"],
                          victory_cards=["Colony"])]),
+]
+
+cornucopia_presets = [
+    Game("Zookeepers",
+         [ExpansionCards(name=EMPIRES,
+                         kingdom_cards=["Overlord", "Sacrifice", "Settlers", "Villa", "Wild Hunt"],
+                         event_cards=["Annex"],
+                         landmark_cards=["Colonnade"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Fairgrounds", "Horse Traders", "Menagerie", "Jester", "Tournament"])]),
 ]
 
 hinterlands_presets = [
@@ -128,6 +148,32 @@ dark_ages_presets = [
                          starter_cards=["Shelters"])]),
 ]
 
+guilds_presets = [
+    Game("Cash Flow",
+         [ExpansionCards(name=EMPIRES,
+                         kingdom_cards=["Castles", "City Quarter", "Engineer", "Gladiator", "Royal Blacksmith"],
+                         landmark_cards=["Baths", "Mountain Pass"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Baker", "Butcher", "Doctor", "Herald", "Soothsayer"])]),
+]
+
+adventures_presets = [
+    Game("Area Control",
+         [ExpansionCards(name=EMPIRES,
+                         kingdom_cards=["Capital", "Catapult", "Charm", "Crown", "Farmers' Market"],
+                         event_cards=["Banquet"],
+                         landmark_cards=["Keep"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Coin of the Realm", "Page", "Relic", "Treasure Trove", "Wine Merchant"])]),
+    Game("No Money No Problems",
+         [ExpansionCards(name=EMPIRES,
+                         kingdom_cards=["Archive", "Encampment", "Royal Blacksmith", "Temple", "Villa"],
+                         landmark_cards=["Bandit Fort"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Dungeon", "Duplicate", "Hireling", "Peasant", "Transmogrify"],
+                         event_cards=["Mission"])]),
+]
+
 empires_presets = [
     Game("Basic Intro",
          [ExpansionCards(name=EMPIRES,
@@ -142,6 +188,11 @@ empires_presets = [
                          landmark_cards=["Arena", "Triumphal Arch"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Empires(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -154,10 +205,16 @@ class Empires(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

@@ -203,6 +203,11 @@ empires_presets = [
                          landmark_cards=["Aqueduct"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Dominion(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -213,10 +218,16 @@ class Dominion(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

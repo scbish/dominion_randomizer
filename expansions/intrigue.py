@@ -58,6 +58,27 @@ seaside_presets = [
                          kingdom_cards=["Salvager", "Embargo", "Smugglers", "Native Village", "Treasury"])]),
 ]
 
+alchemy_presets = [
+    Game("Servants",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Conspirator", "Mill", "Minion", "Pawn", "Steward"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Golem", "Possession", "Scrying Pool", "Transmute", "Vineyard"],
+                         treasure_cards=["Potion"])]),
+    Game("Secret Research",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Bridge", "Masquerade", "Minion", "Nobles", "Shanty Town", "Torturer"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Familiar", "Herbalist", "Philosopher's Stone", "University"],
+                         treasure_cards=["Potion"])]),
+    Game("Pools, Tools, and Fools",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Baron", "Ironworks", "Lurker", "Nobles", "Trading Post", "Wishing Well"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apothecary", "Apprentice", "Golem", "Scrying Pool"],
+                         treasure_cards=["Potion"])]),
+]
+
 prosperity_presets = [
     Game("Paths to Victory",
          [ExpansionCards(name=INTRIGUE,
@@ -74,6 +95,25 @@ prosperity_presets = [
                          kingdom_cards=["Bridge", "Lurker", "Patrol", "Swindler", "Wishing Well"]),
           ExpansionCards(name=PROSPERITY,
                          kingdom_cards=["Bank", "Expand", "Forge", "King's Court", "Vault"])]),
+]
+
+cornucopia_presets = [
+    Game("Last Laughs",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Minion", "Nobles", "Pawn", "Steward", "Swindler"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Farming Village", "Harvest", "Horse Traders", "Hunting Party", "Jester"])]),
+    Game("The Spice of Life",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Fairgrounds", "Horn of Plenty", "Remake", "Tournament", "Young Witch"],
+                         bane_cards=["Wishing Well"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Courtier", "Courtyard", "Diplomat", "Mining Village", "Replace"])]),
+    Game("Small Victories",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Conspirator", "Duke", "Harem", "Pawn", "Secret Passage"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Fortune Teller", "Hamlet", "Hunting Party", "Remake", "Tournament"])]),
 ]
 
 hinterlands_presets = [
@@ -103,6 +143,39 @@ dark_ages_presets = [
                          extra_cards=["Ruins"])]),
 ]
 
+guilds_presets = [
+    Game("Name That Card",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Courtyard", "Harem", "Nobles", "Replace", "Wishing Well"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Baker", "Doctor", "Plaza", "Advisor", "Masterpiece"])]),
+    Game("Tricks of the Trade",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Conspirator", "Masquerade", "Mill", "Nobles", "Secret Passage"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Stonemason", "Herald", "Soothsayer", "Journeyman", "Butcher"])]),
+    Game("Decisions, Decisions",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Merchant Guild", "Candlestick Maker", "Masterpiece", "Taxman", "Butcher"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Bridge", "Pawn", "Mining Village", "Upgrade", "Duke"])]),
+]
+
+adventures_presets = [
+    Game("Royalty Factory",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Conspirator", "Courtier", "Harem", "Nobles", "Swindler"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Bridge Troll", "Duplicate", "Page", "Raze", "Royal Carriage"],
+                         event_cards=["Pilgrimage"])]),
+    Game("Masters of Finance",
+         [ExpansionCards(name=INTRIGUE,
+                         kingdom_cards=["Bridge", "Pawn", "Shanty Town", "Steward", "Upgrade"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Artificer", "Distant Lands", "Gear", "Transmogrify", "Wine Merchant"],
+                         event_cards=["Ball", "Borrow"])]),
+]
+
 empires_presets = [
     Game("Delicious Torture",
          [ExpansionCards(name=INTRIGUE,
@@ -120,6 +193,11 @@ empires_presets = [
                          landmark_cards=["Wolfden"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Intrigue(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -130,10 +208,16 @@ class Intrigue(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

@@ -58,6 +58,21 @@ seaside_presets = [
                                         "Salvager", "Sea Hag", "Smugglers", "Treasury", "Warehouse"])]),
 ]
 
+alchemy_presets = [
+    Game("Forewarned",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Cutpurse", "Embargo", "Ghost Ship", "Native Village", "Treasure Map"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apothecary", "Golem", "Possession", "Scrying Pool", "Transmute"],
+                         treasure_cards=["Potion"])]),
+    Game("Gummed Up",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Ambassador", "Haven", "Sea Hag", "Smugglers", "Warehouse"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apprentice", "Familiar", "Herbalist", "Philosopher's Stone", "Vineyard"],
+                         treasure_cards=["Potion"])]),
+]
+
 prosperity_presets = [
     Game("Exploding Kingdom",
          [ExpansionCards(name=SEASIDE,
@@ -69,6 +84,20 @@ prosperity_presets = [
                          kingdom_cards=["Bazaar", "Lighthouse", "Pirate Ship", "Smugglers", "Warehouse"]),
           ExpansionCards(name=PROSPERITY,
                          kingdom_cards=["Expand", "Hoard", "Mint", "Trade Route", "Watchtower"])]),
+]
+
+cornucopia_presets = [
+    Game("Collector",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Embargo", "Fishing Village", "Merchant Ship", "Navigator", "Smugglers"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Fairgrounds", "Farming Village", "Fortune Teller", "Harvest",
+                                        "Hunting Party"])]),
+    Game("Collider",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Lighthouse", "Salvager", "Treasure Map", "Treasury", "Warehouse"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Menagerie", "Horn of Plenty", "Horse Traders", "Jester", "Tournament"])]),
 ]
 
 hinterlands_presets = [
@@ -98,6 +127,34 @@ dark_ages_presets = [
                          extra_cards=["Ruins"])]),
 ]
 
+guilds_presets = [
+    Game("Ghosts & Taxes",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Cutpurse", "Ghost Ship", "Haven", "Outpost", "Smugglers"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Butcher", "Candlestick Maker", "Herald", "Soothsayer", "Taxman"])]),
+    Game("Island Builder",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Island", "Native Village", "Salvager", "Tactician", "Treasury"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Baker", "Doctor", "Merchant Guild", "Plaza", "Stonemason"])]),
+]
+
+adventures_presets = [
+    Game("Prince of Orange",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Caravan", "Fishing Village", "Merchant Ship", "Tactician", "Treasure Map"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Amulet", "Dungeon", "Haunted Woods", "Page", "Swamp Hag"],
+                         event_cards=["Mission"])]),
+    Game("Gifts and Mathoms",
+         [ExpansionCards(name=SEASIDE,
+                         kingdom_cards=["Ambassador", "Embargo", "Haven", "Salvager", "Smugglers"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Bridge Troll", "Caravan Guard", "Hireling", "Lost City", "Messenger"],
+                         event_cards=["Expedition", "Quest"])]),
+]
+
 empires_presets = [
     Game("Boxed In",
          [ExpansionCards(name=SEASIDE,
@@ -115,6 +172,11 @@ empires_presets = [
                          landmark_cards=["Fountain"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Seaside(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -125,10 +187,16 @@ class Seaside(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

@@ -57,6 +57,21 @@ seaside_presets = [
                          kingdom_cards=["Bazaar", "Lighthouse", "Pirate Ship", "Smugglers", "Warehouse"])]),
 ]
 
+alchemy_presets = [
+    Game("Counting Contest",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Bank", "Counting House", "Hoard", "Goons", "Rabble", "Quarry"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Philosopher's Stone", "Golem", "Herbalist", "Apothecary"],
+                         treasure_cards=["Potion"])]),
+    Game("Lower Learning",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Talisman", "Mint", "Bishop", "Worker's Village", "Peddler", "Vault"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Familiar", "Apprentice", "University", "Vineyard"],
+                         treasure_cards=["Potion"])]),
+]
+
 prosperity_presets = [
     Game("Beginners",
          [ExpansionCards(name=PROSPERITY,
@@ -70,6 +85,14 @@ prosperity_presets = [
          [ExpansionCards(name=PROSPERITY,
                          kingdom_cards=["City", "Expand", "Grand Market", "King's Court", "Loan", "Mint", "Quarry",
                                         "Rabble", "Talisman", "Vault"])]),
+]
+
+cornucopia_presets = [
+    Game("Detours",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Rabble", "Peddler", "Hoard", "Trade Route", "Venture"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Farming Village", "Horn of Plenty", "Jester", "Remake", "Tournament"])]),
 ]
 
 hinterlands_presets = [
@@ -98,6 +121,49 @@ dark_ages_presets = [
                          kingdom_cards=["Forge", "Hoard", "Peddler", "Quarry", "Watchtower"])]),
 ]
 
+guilds_presets = [
+    Game("Quarrymen",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["City", "Expand", "Grand Market", "Mountebank", "Quarry"],
+                         treasure_cards=["Platinum"],
+                         victory_cards=["Colony"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Baker", "Merchant Guild", "Soothsayer", "Stonemason", "Taxman"])]),
+    Game("Metal & Meat",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Forge", "King's Court", "Monument", "Venture", "Watchtower"],
+                         treasure_cards=["Platinum"],
+                         victory_cards=["Colony"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Butcher", "Candlestick Maker", "Plaza", "Stonemason", "Taxman"])]),
+    Game("Penny Pinching",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Bank", "Counting House", "Goons", "Peddler", "Royal Seal"],
+                         treasure_cards=["Platinum"],
+                         victory_cards=["Colony"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Advisor", "Doctor", "Herald", "Journeyman", "Merchant Guild"])]),
+]
+
+adventures_presets = [
+    Game("Last Will and Monument",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Bishop", "Counting House", "Monument", "Rabble", "Vault"],
+                         treasure_cards=["Platinum"],
+                         victory_cards=["Colony"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Coin of the Realm", "Dungeon", "Messenger", "Relic", "Treasure Trove"],
+                         event_cards=["Inheritance"])]),
+    Game("Think Big",
+         [ExpansionCards(name=PROSPERITY,
+                         kingdom_cards=["Contraband", "Expand", "Hoard", "King's Court", "Peddler"],
+                         treasure_cards=["Platinum"],
+                         victory_cards=["Colony"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Distant Lands", "Giant", "Hireling", "Miser", "Storyteller"],
+                         event_cards=["Ball", "Ferry"])]),
+]
+
 empires_presets = [
     Game("Big Time",
          [ExpansionCards(name=PROSPERITY,
@@ -118,6 +184,11 @@ empires_presets = [
                          landmark_cards=["Basilica", "Palace"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Prosperity(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -130,10 +201,16 @@ class Prosperity(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

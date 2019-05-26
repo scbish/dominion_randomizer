@@ -46,6 +46,21 @@ seaside_presets = [
                          kingdom_cards=["Ambassador", "Bazaar", "Caravan", "Embargo", "Smugglers"])]),
 ]
 
+alchemy_presets = [
+    Game("Schemes and Dreams",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Duchess", "Fool's Gold", "Ill-Gotten Gains", "Jack of all Trades", "Scheme"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apothecary", "Apprentice", "Herbalist", "Philosopher's Stone", "Transmute"],
+                         treasure_cards=["Potion"])]),
+    Game("Wine Country",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Crossroads", "Farmland", "Haggler", "Highway", "Nomad Camp"]),
+          ExpansionCards(name=ALCHEMY,
+                         kingdom_cards=["Apprentice", "Familiar", "Golem", "University", "Vineyard"],
+                         treasure_cards=["Potion"])]),
+]
+
 prosperity_presets = [
     Game("Instant Gratification",
          [ExpansionCards(name=HINTERLANDS,
@@ -57,6 +72,19 @@ prosperity_presets = [
                          kingdom_cards=["Cache", "Develop", "Fool's Gold", "Ill-Gotten Gains", "Mandarin"]),
           ExpansionCards(name=PROSPERITY,
                          kingdom_cards=["Bank", "Monument", "Royal Seal", "Trade Route", "Venture"])]),
+]
+
+cornucopia_presets = [
+    Game("Blue Harvest",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Fool's Gold", "Mandarin", "Noble Brigand", "Trader", "Tunnel"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Hamlet", "Horn of Plenty", "Horse Traders", "Jester", "Tournament"])]),
+    Game("Traveling Circus",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Border Village", "Embassy", "Fool's Gold", "Nomad Camp", "Oasis"]),
+          ExpansionCards(name=CORNUCOPIA,
+                         kingdom_cards=["Fairgrounds", "Farming Village", "Hunting Party", "Jester", "Menagerie"])]),
 ]
 
 hinterlands_presets = [
@@ -92,6 +120,34 @@ dark_ages_presets = [
                          kingdom_cards=["Altar", "Catacombs", "Ironmonger", "Poor House", "Storeroom"])]),
 ]
 
+guilds_presets = [
+    Game("Exchanges",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Border Village", "Develop", "Ill-Gotten Gains", "Stables", "Trader"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Butcher", "Herald", "Masterpiece", "Soothsayer", "Stonemason"])]),
+    Game("Road to Riches",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Crossroads", "Farmland", "Highway", "Spice Merchant", "Tunnel"]),
+          ExpansionCards(name=GUILDS,
+                         kingdom_cards=["Advisor", "Baker", "Candlestick Maker", "Journeyman", "Merchant Guild"])]),
+]
+
+adventures_presets = [
+    Game("Traders and Raiders",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Develop", "Farmland", "Haggler", "Spice Merchant", "Trader"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Haunted Woods", "Lost City", "Page", "Port", "Wine Merchant"],
+                         event_cards=["Raid"])]),
+    Game("Journeys",
+         [ExpansionCards(name=HINTERLANDS,
+                         kingdom_cards=["Cartographer", "Crossroads", "Highway", "Inn", "Silk Road"]),
+          ExpansionCards(name=ADVENTURES,
+                         kingdom_cards=["Bridge Troll", "Distant Lands", "Giant", "Guide", "Ranger"],
+                         event_cards=["Expedition", "Inheritance"])]),
+]
+
 empires_presets = [
     Game("Simple Plans",
          [ExpansionCards(name=HINTERLANDS,
@@ -108,6 +164,11 @@ empires_presets = [
                          landmark_cards=["Battlefield", "Fountain"])]),
 ]
 
+# TODO: nocturne/renaissance support
+nocturne_presets = []
+
+renaissance_presets = []
+
 
 class Hinterlands(Expansion):
     def __init__(self, number_of_cards, banned_cards):
@@ -118,10 +179,16 @@ class Hinterlands(Expansion):
             dominion_presets,
             intrigue_presets,
             seaside_presets,
+            alchemy_presets,
             prosperity_presets,
+            cornucopia_presets,
             hinterlands_presets,
             dark_ages_presets,
+            guilds_presets,
+            adventures_presets,
             empires_presets,
+            nocturne_presets,
+            renaissance_presets
         ]
 
     @staticmethod

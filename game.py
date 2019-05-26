@@ -51,7 +51,7 @@ class ExpansionCards:
         if self.victory_cards:
             print(VICTORY + ":", self.victory_cards)
         if self.bane_cards:
-            print(BANE + ":", self.victory_cards)
+            print(BANE + ":", self.bane_cards)
         if self.starter_cards:
             print(STARTER + ":", self.starter_cards)
         if self.extra_cards:
